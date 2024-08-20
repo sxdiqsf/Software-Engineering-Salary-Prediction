@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background: linear-gradient(135deg, #6D5BBA, #8D58BF, #DE66A1, #F58B7A); /* hex color */
+                font-family: 'Arial', sans-serif;
+            }
+            .login-box {
+                background: rgba(255, 255, 255, 0.2);
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                text-align: center;
+            }
+            .login-container {
+                margin-top: 100px;
+                margin-left: 400px;
+                margin-right: 400px;
+            }
+            .form-group {
+                margin-bottom: 1em;
+            }
+            .h1-text{
+                color: #655a9a;
+                border-bottom: 4px solid #655a9a;
+            }
+            .form-group,.p1 {
+                color: #655a9a;
+            }
+            .card {
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+            }
+            .button-inside {
+                background-color: #978930; /* Green */
+                border: solid;
+                color: rgb(128, 247, 156);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="card">
+                <h1 class="h1-text" align="center">Login</h1>
+                {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="username"><b>Username:</b></label>
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="Alex">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><b>Password:</b></label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button class="button-inside" type="submit">Login</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
