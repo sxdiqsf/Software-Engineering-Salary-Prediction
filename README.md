@@ -1,5 +1,3 @@
-Here's a README for your GitHub repository based on the details provided:
-
 ---
 
 # Salary Prediction for Software Engineers
@@ -45,5 +43,3 @@ Future work on this project could include:
 - Enhancing model accuracy through advanced algorithms and techniques.
 
 ---
-
-Feel free to customize this README further based on additional details or specific goals of your project!
